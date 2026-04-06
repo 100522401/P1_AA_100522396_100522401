@@ -10,6 +10,9 @@ st.write(""" Esta aplicación evalúa si un cliente tiene probabilidades de susc
          """)
 
 
+def clean_none_values(X):
+    X = X.copy()
+    return X.replace({None: np.nan})
 
 def transform_pdays(X):
   X = X.copy()
